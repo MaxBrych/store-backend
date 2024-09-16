@@ -118,6 +118,21 @@ const plugins = [
       secret_access_key: process.env.SPACE_SECRET_ACCESS_KEY,
     },
   },
+  {
+    resolve: medusa-plugin-printful,
+    options: {
+        printfulAccessToken: process.env.PRINTFUL_ACCESS_TOKEN, 
+        storeId: process.env.PRINTFUL_STORE_ID, 
+        backendUrl: process.env.BACKEND_URL, 
+        enableWebhooks: true, 
+        enableSync: true,
+        batchSize: 3,
+        productTags: true,
+        productCategories: true,
+        redisURL: REDIS_URL,
+        confirmOrder: true
+    }
+}
 ];
 
 const modules = {
