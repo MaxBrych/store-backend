@@ -119,7 +119,7 @@ const plugins = [
     },
   },
   {
-    resolve: medusa-plugin-printful,
+    resolve: `medusa-plugin-printful`,
     options: {
         printfulAccessToken: process.env.PRINTFUL_ACCESS_TOKEN, 
         storeId: process.env.PRINTFUL_STORE_ID, 
